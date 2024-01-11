@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    
+   
 }
 #head{
     display: flex;
@@ -83,3 +83,18 @@
     }
    
 }
+
+// animation-name: slideup;
+// animation-duration: 0.8s;
+// animation-direction: forwards;
+// animation-timing-function: ease-in;
+// @keyframes slideup{
+//     0%{
+//         margin-bottom: 10px;
+//         opacity: 0%;
+//     }
+//     100%{
+//        margin-bottom: 0px;
+//         opacity: 100%;
+//     }
+// }
