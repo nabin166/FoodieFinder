@@ -1,0 +1,127 @@
+// this is for navbar items
+@import "./App.scss";
+
+@mixin navbarancor{
+    text-decoration: none;
+    color: rgb(37, 37, 37);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    &:hover{
+        color: rgb(113, 120, 128);
+    }
+}
+
+li{
+    a{
+        #logo{
+            width: 200px;
+            position: relative;
+            right: 20px;
+        }
+    }
+}
+li{
+    list-style-type:none;
+
+    a{
+        @include navbarancor();
+       
+       
+    }
+}
+#flexadd{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline-end: 7vw;
+    padding-inline-start: 4vw;
+ 
+}
+#homemenu{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding-inline-start: 0px!important;
+}
+#icon{
+    width: 30px;
+    &:hover{
+        text-decoration-color: bisque;
+        color: rgb(76, 81, 85);
+        cursor: pointer;
+      
+    }
+}
+#searchbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+#inputsearch{
+    border: 1px solid rgb(216, 212, 212);
+    display: none;
+    border-radius: 7px;
+    height: 20px;
+    font-family: 'Courier New', Courier, monospace;
+
+    &:focus{
+        border: 2px solid whitesmoke;
+        outline: 0.3px solid wheat;
+    }
+}
+
+// Mobile Responsive
+@media screen and (max-width:950px) {
+    #flexadd{
+        
+        justify-content: center;
+        flex-direction: column;
+    }
+    li{
+        list-style-type:none;
+    
+        a{
+            @include navbarancor();
+            font-size: calc(0.9rem + 1vw);  
+        }
+    }
+    
+}
+
+
+// First navbar section
+
+#firstnav{
+    height: 30px;
+    background-color: $Firstcolor;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 40px;
+    padding-left: 40px;
+    @media screen and (max-width:950px) {
+        padding-right: 4px;
+        padding-left: 4px;
+    }
+
+    div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+             a{
+            text-decoration: none;
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+             
+
+            &:hover{
+                color: rgb(53, 51, 51);
+            }
+
+    }
+
+   }
+}

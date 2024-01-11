@@ -1,0 +1,85 @@
+@import "./App.scss";
+#afternavbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+#head{
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    right: -190px;
+    top: -190px;
+    z-index: -10;    
+}
+
+#circle{
+    height: 80vh;
+    width: 80vh;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $Thirdcolor;
+}
+#insidecircle{
+    height: 60vh;
+    width: 60vh;
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+
+#imgright{
+
+    // transform: translate(0 ,+50%);
+    z-index: -9;
+}
+#enjoytext{
+    text-align: center;
+    
+}
+#strong{
+    font-size: 2.5em;
+    color: $Fifthcolor;
+}
+#small{
+    font-size: 1em;
+}
+@media screen and (max-width:950px) {
+    #afternavbar{
+        margin-top: 40px;
+    }
+  
+    #head{
+      
+        right: -100px;
+        top: -100px;
+        z-index: -10;    
+    }
+    
+    #circle{
+        height: 40vh;
+        width: 40vh;
+      
+    }
+    #insidecircle{
+        height: 30vh;
+        width: 30vh;
+    
+    }
+   
+    #strong{
+        font-size: calc(1em + 1vh);
+        color: $Fifthcolor;
+    }
+    #small{
+        font-size: calc(0.5em + 1vh);
+    }
+    #enjoytext{
+        margin-bottom: 30px;
+        
+    }
+   
+}
