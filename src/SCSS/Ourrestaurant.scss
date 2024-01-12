@@ -1,0 +1,64 @@
+@import "../SCSS/App.scss";
+#restaurant{
+    #coverimg{
+        margin-top: 20px;
+        height: 40vh;
+        position: relative;
+        background-color: black;
+
+        img{
+            object-position: bottom;
+            object-fit: cover;
+            overflow: hidden;
+            height: 40vh;
+            width: 100%;
+            opacity: 30%;  
+        }
+        h1{
+            color: white;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50% , -50%);
+        }
+        h2{
+            color: $Fifthcolor;
+        }
+
+        @media screen and (max-width:950px) {
+            h1{
+                font-size: large;
+            }
+        }
+    }
+
+    div #restaurantname{
+        margin-top: 20px;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        justify-content: stretch;
+        gap: 20px;
+
+        div{
+            height: 40px;
+            background-color: $Fifthcolor;
+            color: white;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px 0px;
+
+            &:hover{
+                background-color: $Thirdcolor;
+                transition: 1s;
+            }
+        }
+        h3{
+           margin: 0px;
+           
+           
+        }
+    }
+}
