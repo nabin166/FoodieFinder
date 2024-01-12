@@ -3,6 +3,7 @@ import "../SCSS/Itemcard.scss"
 import { MdAddCircle } from "react-icons/md";
 import { GrSubtractCircle } from "react-icons/gr";
 import { FaCartShopping } from "react-icons/fa6";
+import Pagination from './Pagination';
 
 export default function Itemcard() {
     const cartitem = [
@@ -56,9 +57,20 @@ export default function Itemcard() {
       }
  
     ]
-
+    const totalitemcount = [];
+    for(let j = 0 ; j<cartitem.length ;j++){
+      totalitemcount.push(j);
+    }
+    const totalpostlength = totalitemcount.length;    
     const [beforecount,setCounts]= useState(Array(cartitem.length).fill(0));
 
+    // for pagination
+    const [currentpage,setcurrentpage] = useState(2);
+    const [postsperpage,setpostsperpage] = useState(4);
+    const lastpostindex = currentpage*postsperpage; 
+    const firstpostindex = lastpostindex-postsperpage;
+    const currentposts = cartitem.slice(firstpostindex,lastpostindex);
+   
     // const Add =(event , index)=>{
     //   event.preventDefault();
     //   return aftercount(beforecount + 1);
@@ -86,10 +98,11 @@ export default function Itemcard() {
    
     
      return (
+      <>
 
     <div id='itemcard'>
 
-    {cartitem.map((item,index)=>
+    {currentposts.map((item,index)=>
     (
       <div> 
       {/* cart icon */}
@@ -115,9 +128,12 @@ export default function Itemcard() {
     </div>
 
     ))
-       
+     
 }   
-      
+
+     
     </div>
+    <Pagination totalposts ={ totalpostlength} setcurrentpage={setcurrentpage} postsperpage = {postsperpage}/>
+    </>
   )
 }
