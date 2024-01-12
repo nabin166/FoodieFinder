@@ -2,6 +2,8 @@
 @import "./App.scss";
 
 @mixin navbarancor{
+
+
     text-decoration: none;
     color: rgb(37, 37, 37);
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -13,19 +15,25 @@
 }
 
 li{
+
     a{
         #logo{
             width: 200px;
             position: relative;
             right: 20px;
+            @include animationup();
+            
         }
     }
 }
 li{
+  
     list-style-type:none;
+    @include animationup();
 
     a{
         @include navbarancor();
+        
        
        
     }
@@ -47,6 +55,7 @@ li{
 }
 #icon{
     width: 30px;
+    @include animationup();
     &:hover{
         text-decoration-color: bisque;
         color: rgb(76, 81, 85);
@@ -86,6 +95,8 @@ li{
         a{
             @include navbarancor();
             font-size: calc(0.9rem + 1vw);  
+           
+            
         }
     }
     
@@ -117,6 +128,8 @@ li{
             color: black;
             font-family: 'Courier New', Courier, monospace;
             text-align: center;
+            
+            
              
 
             &:hover{
@@ -127,4 +140,5 @@ li{
 
    }
 }
+
 

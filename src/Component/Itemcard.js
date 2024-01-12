@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "../SCSS/Itemcard.scss"
 import { MdAddCircle } from "react-icons/md";
 import { GrSubtractCircle } from "react-icons/gr";
@@ -56,11 +56,40 @@ export default function Itemcard() {
       }
  
     ]
-  return (
+
+    const [beforecount,setCounts]= useState(Array(cartitem.length).fill(0));
+
+    // const Add =(event , index)=>{
+    //   event.preventDefault();
+    //   return aftercount(beforecount + 1);
+    // }
+
+    const Add = (index) => {
+      setCounts(
+        (befcount)=>{
+          const cnt = [...befcount];
+            console.log(cnt[index]+=1);
+            return cnt;
+        }
+      )  
+     };
+
+     const Sub = (index)=>{
+      setCounts(
+        (befcount)=>{
+          const cnt = [...befcount];
+          befcount[index] = Math.max(0, befcount[index] - 1);
+          return cnt;
+        }
+      )
+     }
+   
+    
+     return (
 
     <div id='itemcard'>
 
-    {cartitem.map((item)=>
+    {cartitem.map((item,index)=>
     (
       <div> 
       {/* cart icon */}
@@ -73,9 +102,9 @@ export default function Itemcard() {
            {/* cart section  */}
            <div id='cartsection'>
               <div id='cart'>
-                <div id="subtractcounter"><a href='#'><GrSubtractCircle size={22} /></a></div>
-                <p>0</p>
-                <div id="addcounter"><a href='#'><MdAddCircle  size={22}/></a></div>
+                <div id="subtractcounter"><a href='/' onClick={(event)=>{event.preventDefault();Sub(index)}}><GrSubtractCircle size={22} /></a></div>
+                <p>{beforecount[index]}</p>
+                <div id="addcounter"><a href='/' onClick={(event)=>{event.preventDefault();Add(index)}}><MdAddCircle  size={22}/></a></div>
               
               </div>
             </div>
