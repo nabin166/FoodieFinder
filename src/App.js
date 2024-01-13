@@ -1,19 +1,16 @@
 
-import Categorytoggle from './Component/Categorytoggle';
-import Foodcarousel from './Component/Foodcarousel';
-import Footer from './Component/Footer';
-import Heading from './Component/Heading';
-import Ourrestaurant from './Component/Ourrestaurant';
+
+import Routing from './Component/Routing';
 import './SCSS/App.scss';
+import { BrowserRouter , Routes , Route } from 'react-router-dom'
 
 function App() {
   return (
     <div >
-     <Heading/>
-     <Categorytoggle/>
-     <Ourrestaurant/>
-     <Foodcarousel/>
-     <Footer/>
+       <BrowserRouter basename="">
+       <Routing/>
+     </BrowserRouter>
+    
     </div>
   );
 }

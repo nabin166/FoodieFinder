@@ -3,6 +3,8 @@ import "../SCSS/Navbar.scss"
 import { FaSearch } from "react-icons/fa";
 import { CgMail } from "react-icons/cg";
 import { FaCartShopping } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+
 
 export default function Navbar() {
   
@@ -27,7 +29,7 @@ function searchboxpopup(){
     {/* first navbar */}
     <div id='firstnav'>
         <div><CgMail /><small>FoodieFinder36@gmail.com</small></div>
-        <div><a href=''>Login</a><a href=''>Signup</a><a href=''><FaCartShopping size={25} id='cart' /></a></div>
+        <div><a href=''>Login</a><Link to="/Signinup">Signup</Link><a href=''><FaCartShopping size={25} id='cart' /></a></div>
     </div>
     {/* second navbar */}
     <div id='flexadd'>
