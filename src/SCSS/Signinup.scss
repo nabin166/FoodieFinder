@@ -1,2 +1,39 @@
 @import "./App.scss";
 
+
+#signinup{
+    display: flex;
+    flex-direction: row;
+    background-color: $Firstcolor;
+
+    #imagesection{
+       
+        width: 40vw;
+        min-height: 100vh;
+        // background-image: url(${process.env.PUBLIC_URL}/Images/cover.jpeg);
+        background-position: right 10px top 0px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        img{
+            margin-top: 50px;
+        }
+
+        @media screen and (max-width:950px) {
+            display: none;
+        }
+
+    }
+    #form{
+        width: 60vw;
+       
+        display: flex;
+        justify-content: center;
+
+        @media screen and (max-width:950px) {
+            width: 100vw;
+            height: 100vh;
+        }
+
+    }
+
+}
