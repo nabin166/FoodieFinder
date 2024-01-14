@@ -10,7 +10,7 @@ export default function Routing() {
    
         <Routes >
             <Route path="/" element={<Homepage/>} />
-            <Route path="/Signinup" element={<Signinup/>} />
+            <Route path="/Signinup/*" element={<Signinup image = {`${process.env.PUBLIC_URL}/Images/logo.png`}/>} />
         </Routes>
    
    )

@@ -1,5 +1,13 @@
 @import "./App.scss";
-
+#linkside{
+    color: rgb(57, 87, 114);
+    margin-left: 20px;
+    display: flexbox;
+    text-decoration: none;
+    &:hover{
+        color: rgb(212, 203, 203);
+    }
+}
 
 #signinup{
     display: flex;

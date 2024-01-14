@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import '../SCSS/SignInForm.scss';
 import { Link } from 'react-router-dom';
 
-const Signin = () => {
+const Signin = ({image}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberme, setRememberme] = useState('');
@@ -17,7 +17,7 @@ const Signin = () => {
   return (
     <div className="signin-form">
       <h2>Sign In</h2>
-      <img id='logo' src={"images/logo.png"} width={"40%"}></img>
+      <img id='logo' src={image} width={"40%"}></img>
       <form onSubmit={handleSignIn}>
         <label>Email:</label>
         <input
@@ -45,6 +45,8 @@ const Signin = () => {
         <button type="submit">Sign In</button>
       </form>
      <Link id='Link' to={"/"}>Homepage</Link>
+     <Link id='linkside' to="/Signinup/Signin">Signin</Link>
+     <Link id='linkside' to="/Signinup/Signup">Signup</Link>
     </div>
   );
 };
