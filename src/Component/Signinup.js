@@ -12,6 +12,7 @@ export default function Signinup({image}) {
                 <div id='imagesection'  style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/Images/coverone.jpeg)` }} ><img alt='Foodie Finder' src={image} width={"40%"}></img><br></br></div>
                 <div id='form'>
                 
+                
                 <Routes >
                         <Route path="/Signin" element={<Signin image = {image}/>} />
                         <Route path="/Signup"  element={<Signup  image = {image}/>} />
