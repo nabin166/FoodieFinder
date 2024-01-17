@@ -1,0 +1,50 @@
+@import "../SCSS/App.scss";
+#fooddescription{
+    position:fixed;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(131, 121, 121, 0.808);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    
+
+    #fooddesc{
+        width: 80vw;
+        height: 80vh;
+        background-color: $Firstcolor;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        
+        #image{
+            padding: 40px;
+            img{
+                object-fit: cover;
+                height: 100%;width: 100%;
+                overflow: hidden;
+            
+            }
+         }
+
+        #productdetail{
+            display: grid;
+            grid-template-rows: auto auto auto auto;
+            #cart{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 20px;
+            }
+            h2 ,  h1{
+                color: $Fifthcolor;
+            }
+          
+
+            
+        }
+    }
+   
+   
+}
